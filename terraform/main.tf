@@ -9,12 +9,23 @@ resource "aws_vpc" "main" {
   }
 }
 
-resource "aws_subnet" "public" {
+resource "aws_subnet" "public_1" {
   vpc_id                  = aws_vpc.main.id
   cidr_block              = "10.0.1.0/24"
+  availability_zone       = "ap-southeast-3a"
   map_public_ip_on_launch = true
   tags = {
-    Name = "netflix_public_subnet"
+    Name = "netflix_public_subnet_1"
+  }
+}
+
+resource "aws_subnet" "public_2" {
+  vpc_id                  = aws_vpc.main.id
+  cidr_block              = "10.0.2.0/24"
+  availability_zone       = "ap-southeast-3b"
+  map_public_ip_on_launch = true
+  tags = {
+    Name = "netflix_public_subnet_2"
   }
 }
 
@@ -38,8 +49,13 @@ resource "aws_route" "default_route" {
   gateway_id             = aws_internet_gateway.igw.id
 }
 
-resource "aws_route_table_association" "public_assoc" {
-  subnet_id      = aws_subnet.public.id
+resource "aws_route_table_association" "public_assoc_1" {
+  subnet_id      = aws_subnet.public_1.id
+  route_table_id = aws_route_table.public_rt.id
+}
+
+resource "aws_route_table_association" "public_assoc_2" {
+  subnet_id      = aws_subnet.public_2.id
   route_table_id = aws_route_table.public_rt.id
 }
 
@@ -108,7 +124,7 @@ resource "aws_security_group" "sg" {
 resource "aws_instance" "jenkins" {
   ami                         = "ami-003a6aabfe9d0683e"
   instance_type               = "t3.medium"
-  subnet_id                   = aws_subnet.public.id
+  subnet_id                   = aws_subnet.public_1.id
   key_name                    = "netflix-devsecops"
   vpc_security_group_ids      = [aws_security_group.sg.id]
   associate_public_ip_address = true
