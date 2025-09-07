@@ -543,7 +543,7 @@ This project demonstrates a complete DevSecOps pipeline for deploying a Netflix 
 - CI/CD with Jenkins
 - Security scanning with SonarQube, OWASP Dependency Check, and Trivy
 - Containerization with Docker
-- Orchestration with Azure Kubernetes Service
+- Orchestration with Elastic Kubernetes Service
 - GitOps with ArgoCD
 - Monitoring with Prometheus and Grafana
 
