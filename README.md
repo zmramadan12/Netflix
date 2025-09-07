@@ -1,5 +1,8 @@
-Netflix Clone Deployment on AWS - DevSecOps Project
+**Netflix Clone Deployment on AWS - DevSecOps Project
 This repository contains a complete DevSecOps pipeline for deploying a Netflix clone application on Aws, implementing security scanning, monitoring, and Kubernetes deployment.
+**
+
+<img width="1919" height="1026" alt="Screenshot 2025-09-02 011125" src="https://github.com/user-attachments/assets/beff81bd-a5de-4858-b8ec-dbba5b2dc6d5" />
 
 ## Project Overview
 
