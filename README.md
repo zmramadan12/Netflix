@@ -4,6 +4,12 @@ This repository contains a complete DevSecOps pipeline for deploying a Netflix c
 
 <img width="1919" height="1026" alt="Screenshot 2025-09-02 011125" src="https://github.com/user-attachments/assets/beff81bd-a5de-4858-b8ec-dbba5b2dc6d5" />
 
+<img width="1918" height="1024" alt="Screenshot 2025-09-02 040500" src="https://github.com/user-attachments/assets/b83cf238-5575-48a8-a901-112fb03b22b4" />
+
+<img width="1917" height="1019" alt="Screenshot 2025-09-03 120559" src="https://github.com/user-attachments/assets/66aa5a39-3b42-4536-8484-5a98c556a5f0" />
+
+
+
 ## Project Overview
 
 This project demonstrates a complete CI/CD pipeline with integrated security (DevSecOps) for a Netflix clone application, deployed on Aws infrastructure. The pipeline includes:
